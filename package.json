@@ -1,0 +1,29 @@
+{
+  "name": "secure-spreadsheet",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ankane/secure-spreadsheet",
+  "description": "Secure your data exports - encrypt and password protect sensitive CSV and XLSX files",
+  "bin": {
+    "secure-spreadsheet": "src/cli.js"
+  },
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "commander": "^2.15.1",
+    "csv-parse": "^2.2.0",
+    "get-stdin": "^6.0.0",
+    "xlsx-populate": "^1.14.0"
+  },
+  "authors": [
+    "ankane"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankane/secure-spreadsheet"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1"
+  }
+}
