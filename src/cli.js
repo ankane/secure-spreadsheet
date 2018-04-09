@@ -19,21 +19,23 @@ program
 
 assert(program.password, "--password required");
 
+function writeWorkbook(workbook) {
+  workbook.outputAsync({password: program.password}).then(data => {
+    process.stdout.write(data);
+  });
+}
+
 if (program.inputFormat == "xlsx") {
   getStdin.buffer().then(str => {
     XlsxPopulate.fromDataAsync(str).then(workbook => {
-      workbook.outputAsync({password: program.password}).then(data => {
-        process.stdout.write(data);
-      });
+      writeWorkbook(workbook);
     });
   });
 } else {
   const parser = parse((err, data) => {
     XlsxPopulate.fromBlankAsync().then(workbook => {
       workbook.sheet(0).cell('A1').value(data);
-      workbook.outputAsync({password: program.password}).then(data => {
-        process.stdout.write(data);
-      });
+      writeWorkbook(workbook);
     });
   });
 
