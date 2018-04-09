@@ -52,6 +52,10 @@ File.open("output.xlsx", "w") { |f| f.write(result) }
 
 An alternative approach to secure your data is to create a password-protected ZIP archive. However, this leaves the data exposed after it’s unzipped.
 
+## Credits
+
+Thanks to [xlsx-populate](https://github.com/dtjohnson/xlsx-populate) for providing the encryption and password protection.
+
 ## History
 
 View the [changelog](https://github.com/ankane/secure-spreadsheet/blob/master/CHANGELOG.md)
