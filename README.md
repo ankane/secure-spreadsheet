@@ -4,7 +4,7 @@
 
 The [Office Open XML format](https://en.wikipedia.org/wiki/Office_Open_XML) provides a standard for encryption and password protection
 
-Works with Excel, LibreOffice, and Mac Preview
+Works with Excel, LibreOffice Calc, and Mac Preview
 
 ## Getting Started
 
