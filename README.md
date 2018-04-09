@@ -4,7 +4,7 @@
 
 The [Office Open XML format](https://en.wikipedia.org/wiki/Office_Open_XML) provides a standard for encryption and password protection
 
-Works with Excel, LibreOffice Calc, and Mac Preview
+Works with Excel, Numbers, and LibreOffice Calc
 
 ## Getting Started
 
@@ -51,6 +51,10 @@ File.open("output.xlsx", "w") { |f| f.write(result) }
 ## Other Approaches
 
 An alternative approach to secure your data is to create a password-protected ZIP archive. However, this leaves the data exposed after it’s unzipped.
+
+## Notes
+
+The content type for XLSX is `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`.
 
 ## Credits
 
