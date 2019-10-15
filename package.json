@@ -10,10 +10,10 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "commander": "^2.15.1",
+    "commander": ">=2.15.1",
     "csv-parse": ">=4.4.6",
-    "get-stdin": "^6.0.0",
-    "xlsx-populate": "^1.14.0"
+    "get-stdin": ">=6.0.0",
+    "xlsx-populate": ">=1.14.0"
   },
   "authors": [
     "ankane"
@@ -24,6 +24,6 @@
     "url": "https://github.com/ankane/secure-spreadsheet"
   },
   "devDependencies": {
-    "eslint": "^4.18.1"
+    "eslint": ">=4.18.1"
   }
 }
