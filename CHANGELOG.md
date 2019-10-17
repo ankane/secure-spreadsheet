@@ -1,4 +1,4 @@
-## 0.1.1 [unreleased]
+## 0.1.1
 
 - Updated `csv-parse` dependency for [NPM advisory 1171](https://www.npmjs.com/advisories/1171)
 
