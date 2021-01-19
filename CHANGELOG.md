@@ -1,3 +1,7 @@
+## 0.1.2 (unreleased)
+
+- Fixed error with Commander.js 7
+
 ## 0.1.1 (2019-10-16)
 
 - Updated `csv-parse` dependency for [NPM advisory 1171](https://www.npmjs.com/advisories/1171)
