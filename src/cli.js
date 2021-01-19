@@ -17,15 +17,17 @@ program
   .option('--input-format <format>', 'Input format')
   .parse(process.argv);
 
-assert(program.password, "--password required");
+const options = program.opts();
+
+assert(options.password, "--password required");
 
 function writeWorkbook(workbook) {
-  workbook.outputAsync({password: program.password}).then(data => {
+  workbook.outputAsync({password: options.password}).then(data => {
     process.stdout.write(data);
   });
 }
 
-if (program.inputFormat == "xlsx") {
+if (options.inputFormat == "xlsx") {
   getStdin.buffer().then(str => {
     XlsxPopulate.fromDataAsync(str).then(workbook => {
       writeWorkbook(workbook);
