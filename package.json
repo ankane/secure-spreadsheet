@@ -10,7 +10,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "commander": ">=2.15.1",
+    "commander": ">=4.0.1",
     "csv-parse": ">=4.4.6",
     "get-stdin": ">=6.0.0",
     "xlsx-populate": ">=1.14.0"
