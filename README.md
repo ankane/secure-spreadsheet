@@ -80,5 +80,5 @@ To get started with development:
 ```sh
 git clone https://github.com/ankane/secure-spreadsheet.git
 cd secure-spreadsheet
-yarn install
+npm install
 ```
