@@ -35,6 +35,9 @@ if (options.inputFormat == "xlsx") {
   });
 } else {
   const parser = parse((err, data) => {
+    if (err) {
+      assert.fail(err);
+    }
     XlsxPopulate.fromBlankAsync().then(workbook => {
       workbook.sheet(0).cell('A1').value(data);
       writeWorkbook(workbook);

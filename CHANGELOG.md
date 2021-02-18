@@ -1,3 +1,7 @@
+## 0.1.3 (unreleased)
+
+- Fixed error handling for CSV files
+
 ## 0.1.2 (2021-01-19)
 
 - Fixed error with Commander.js 7
