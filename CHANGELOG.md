@@ -1,4 +1,4 @@
-## 0.1.3 (unreleased)
+## 0.1.3 (2021-02-17)
 
 - Fixed error handling for CSV files
 
