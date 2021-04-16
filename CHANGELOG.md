@@ -1,4 +1,4 @@
-## 0.1.4 (unreleased)
+## 0.1.4 (2021-04-16)
 
 - Fixed error with get-stdin 9
 
