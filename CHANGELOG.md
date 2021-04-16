@@ -1,3 +1,7 @@
+## 0.1.4 (unreleased)
+
+- Fixed error with get-stdin 9
+
 ## 0.1.3 (2021-02-17)
 
 - Fixed error handling for CSV files
