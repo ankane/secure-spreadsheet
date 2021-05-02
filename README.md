@@ -30,30 +30,13 @@ secure-spreadsheet --password secret --input-format xlsx < input.xlsx > output.x
 
 ## Languages
 
-Many languages don’t have libraries to create encrypted spreadsheets. Luckily, we can use the CLI.
+You can use the CLI to create encrypted spreadsheets in other languages.
 
-- [Ruby](#ruby)
 - [PHP](#php)
+- [Python](#python)
+- [Ruby](#ruby)
 
-Pull requests are welcome for other languages.
-
-### Ruby
-
-```ruby
-require "csv"
-
-csv_str = CSV.generate do |csv|
-  csv << ["awesome", "csv"]
-end
-
-result = IO.popen(["secure-spreadsheet", "--password", "secret"], "r+") do |io|
-  io.write(csv_str)
-  io.close_write
-  io.read
-end
-
-File.write("output.xlsx", result)
-```
+Pull requests are welcome for more languages.
 
 ### PHP
 
@@ -84,6 +67,37 @@ if (proc_close($process) != 0) {
 }
 
 file_put_contents("output.xlsx", $result);
+```
+
+### Python
+
+```python
+import subprocess
+
+csv_str = b'awesome,csv'
+
+result = subprocess.check_output(['secure-spreadsheet', '--password', 'secret'], input=csv_str)
+
+with open('output.xlsx', 'wb') as f:
+    f.write(result)
+```
+
+### Ruby
+
+```ruby
+require "csv"
+
+csv_str = CSV.generate do |csv|
+  csv << ["awesome", "csv"]
+end
+
+result = IO.popen(["secure-spreadsheet", "--password", "secret"], "r+") do |io|
+  io.write(csv_str)
+  io.close_write
+  io.read
+end
+
+File.write("output.xlsx", result)
 ```
 
 ## Other Approaches
