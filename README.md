@@ -50,7 +50,7 @@ result = IO.popen(["secure-spreadsheet", "--password", "secret"], "r+") do |io|
   io.read
 end
 
-File.open("output.xlsx", "w") { |f| f.write(result) }
+File.write("output.xlsx", result)
 ```
 
 ### PHP
