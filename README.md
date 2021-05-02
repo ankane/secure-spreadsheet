@@ -86,16 +86,14 @@ with open('output.xlsx', 'wb') as f:
 
 ```ruby
 require "csv"
+require "open3"
 
 csv_str = CSV.generate do |csv|
   csv << ["awesome", "csv"]
 end
 
-result = IO.popen(["secure-spreadsheet", "--password", "secret"], "r+") do |io|
-  io.write(csv_str)
-  io.close_write
-  io.read
-end
+result, status = Open3.capture2("secure-spreadsheet", "--password", "secret", stdin_data: csv_str)
+raise "Command failed" unless status.success?
 
 File.write("output.xlsx", result)
 ```
