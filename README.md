@@ -67,19 +67,21 @@ $descriptorspec = array(
 
 $process = proc_open(["secure-spreadsheet", "--password", "secret"], $descriptorspec, $pipes);
 
-if (is_resource($process)) {
-  fwrite($pipes[0], $csv_str);
-  fclose($pipes[0]);
-
-  $result = stream_get_contents($pipes[1]);
-  fclose($pipes[1]);
-
-  if (proc_close($process) != 0) {
-    die("Command failed");
-  }
+if (!is_resource($process)) {
+  die("Command failed");
 }
 
-$file = fopen("output.xlsx", "w") or die("Unable to open file!");
+fwrite($pipes[0], $csv_str);
+fclose($pipes[0]);
+
+$result = stream_get_contents($pipes[1]);
+fclose($pipes[1]);
+
+if (proc_close($process) != 0) {
+  die("Command failed");
+}
+
+$file = fopen("output.xlsx", "w") or die("Unable to open file");
 fwrite($file, $result);
 fclose($file);
 ```
