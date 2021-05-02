@@ -35,6 +35,8 @@ Many languages don’t have libraries to create encrypted spreadsheets. Luckily,
 - [Ruby](#ruby)
 - [PHP](#php)
 
+Pull requests are welcome for other languages.
+
 ### Ruby
 
 ```ruby
