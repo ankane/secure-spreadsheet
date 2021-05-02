@@ -19,13 +19,13 @@ npm install -g secure-spreadsheet
 Convert a CSV into password-protected, AES-256 encrypted XLSX
 
 ```sh
-cat input.csv | secure-spreadsheet --password secret > output.xlsx
+secure-spreadsheet --password secret < input.csv > output.xlsx
 ```
 
 Protect an existing XLSX
 
 ```sh
-cat input.xlsx | secure-spreadsheet --password secret --input-format xlsx > output.xlsx
+secure-spreadsheet --password secret --input-format xlsx < input.xlsx > output.xlsx
 ```
 
 ## Languages
