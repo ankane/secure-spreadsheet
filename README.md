@@ -81,9 +81,7 @@ if (proc_close($process) != 0) {
   die("Command failed");
 }
 
-$file = fopen("output.xlsx", "w") or die("Unable to open file");
-fwrite($file, $result);
-fclose($file);
+file_put_contents("output.xlsx", $result);
 ```
 
 ## Other Approaches
