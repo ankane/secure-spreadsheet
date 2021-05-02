@@ -32,6 +32,9 @@ cat input.xlsx | secure-spreadsheet --password secret --input-format xlsx > outp
 
 Many languages don’t have libraries to create encrypted spreadsheets. Luckily, we can use the CLI.
 
+- [Ruby](#ruby)
+- [PHP](#php)
+
 ### Ruby
 
 ```ruby
@@ -48,6 +51,37 @@ result = IO.popen("secure-spreadsheet --password secret", "r+") do |io|
 end
 
 File.open("output.xlsx", "w") { |f| f.write(result) }
+```
+
+### PHP
+
+```php
+<?php
+
+$csv_str = "awesome,csv";
+
+$descriptorspec = array(
+  0 => array("pipe", "r"),
+  1 => array("pipe", "w")
+);
+
+$process = proc_open(["secure-spreadsheet", "--password", "secret"], $descriptorspec, $pipes);
+
+if (is_resource($process)) {
+  fwrite($pipes[0], $csv_str);
+  fclose($pipes[0]);
+
+  $result = stream_get_contents($pipes[1]);
+  fclose($pipes[1]);
+
+  if (proc_close($process) != 0) {
+    die("Command failed");
+  }
+}
+
+$file = fopen("output.xlsx", "w") or die("Unable to open file!");
+fwrite($file, $result);
+fclose($file);
 ```
 
 ## Other Approaches
