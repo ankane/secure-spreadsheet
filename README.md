@@ -44,7 +44,7 @@ csv_str = CSV.generate do |csv|
   csv << ["awesome", "csv"]
 end
 
-result = IO.popen("secure-spreadsheet --password secret", "r+") do |io|
+result = IO.popen(["secure-spreadsheet", "--password", "secret"], "r+") do |io|
   io.write(csv_str)
   io.close_write
   io.read
