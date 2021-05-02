@@ -85,12 +85,9 @@ with open('output.xlsx', 'wb') as f:
 ### Ruby
 
 ```ruby
-require "csv"
 require "open3"
 
-csv_str = CSV.generate do |csv|
-  csv << ["awesome", "csv"]
-end
+csv_str = "awesome,csv"
 
 result, status = Open3.capture2("secure-spreadsheet", "--password", "secret", stdin_data: csv_str)
 raise "Command failed" unless status.success?
