@@ -1,3 +1,7 @@
+## 0.1.5 (unreleased)
+
+- Fixed error with csv-parse 5
+
 ## 0.1.4 (2021-04-16)
 
 - Fixed error with get-stdin 9

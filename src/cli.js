@@ -2,7 +2,9 @@
 
 const assert = require('assert');
 const getStdin = require('get-stdin');
-const parse = require('csv-parse');
+const csv = require('csv-parse');
+// csv is function in csv-parse 4 and object in csv-parse 5
+const parse = typeof csv === 'object' ? csv.parse : csv;
 const program = require('commander');
 const XlsxPopulate = require('xlsx-populate');
 
