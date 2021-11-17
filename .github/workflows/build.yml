@@ -10,4 +10,4 @@ jobs:
       with:
         node-version: 12
     - run: npm install -g .
-    - run: cat test/input.csv | secure-spreadsheet --password secret > output.xlsx
+    - run: secure-spreadsheet --password secret < test/input.csv > output.xlsx
