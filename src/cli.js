@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import assert from 'assert';
-import getStdin from 'get-stdin';
-import parse from 'csv-parse';
-import program from 'commander';
-import XlsxPopulate from 'xlsx-populate';
+const assert = require('assert');
+const getStdin = require('get-stdin');
+const parse = require('csv-parse');
+const program = require('commander');
+const XlsxPopulate = require('xlsx-populate');
 
 process.on('uncaughtException', function (err) {
   // eslint-disable-next-line no-console

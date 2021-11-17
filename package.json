@@ -3,10 +3,6 @@
   "version": "0.1.4",
   "homepage": "https://github.com/ankane/secure-spreadsheet",
   "description": "Secure your data exports - encrypt and password protect sensitive CSV and XLSX files",
-  "type": "module",
-  "engines": {
-    "node": ">= 12"
-  },
   "bin": {
     "secure-spreadsheet": "src/cli.js"
   },
@@ -16,7 +12,7 @@
   "dependencies": {
     "commander": ">=4.0.1",
     "csv-parse": ">=4.4.6",
-    "get-stdin": ">=6.0.0",
+    "get-stdin": ">=6.0.0 <9.0.0",
     "xlsx-populate": ">=1.14.0"
   },
   "authors": [

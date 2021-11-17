@@ -1,8 +1,3 @@
-## 0.2.0 (unreleased)
-
-- Switched to ESM imports
-- Dropped support for Node < 12
-
 ## 0.1.4 (2021-04-16)
 
 - Fixed error with get-stdin 9
