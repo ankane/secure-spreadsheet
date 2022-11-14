@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const assert = require('assert');
-const getStdin = require('get-stdin');
 const csv = require('csv-parse');
 // csv is function in csv-parse 4 and object in csv-parse 5
 const parse = typeof csv === 'object' ? csv.parse : csv;
@@ -30,7 +29,18 @@ function writeWorkbook(workbook) {
 }
 
 if (options.inputFormat == "xlsx") {
-  getStdin.buffer().then(str => {
+  const readable = process.stdin;
+  const chunks = [];
+
+  readable.on('readable', () => {
+    let chunk;
+    while (null !== (chunk = readable.read())) {
+      chunks.push(chunk);
+    }
+  });
+
+  readable.on('end', () => {
+    const str = Buffer.concat(chunks);
     XlsxPopulate.fromDataAsync(str).then(workbook => {
       writeWorkbook(workbook);
     });
