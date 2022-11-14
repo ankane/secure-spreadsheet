@@ -26,6 +26,6 @@
     "url": "https://github.com/ankane/secure-spreadsheet"
   },
   "devDependencies": {
-    "eslint": ">=4.18.1"
+    "eslint": ">=6"
   }
 }
