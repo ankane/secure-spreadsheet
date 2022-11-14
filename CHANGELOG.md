@@ -1,3 +1,7 @@
+## 0.2.0 (unreleased)
+
+- Dropped support for Node < 10
+
 ## 0.1.5 (2021-11-17)
 
 - Fixed error with csv-parse 5
