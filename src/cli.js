@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
 const assert = require('assert');
-const csv = require('csv-parse');
-// csv is function in csv-parse 4 and object in csv-parse 5
-const parse = typeof csv === 'object' ? csv.parse : csv;
+const { parse } = require('csv-parse');
 const program = require('commander');
 const XlsxPopulate = require('xlsx-populate');
 

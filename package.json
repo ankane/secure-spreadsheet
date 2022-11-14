@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "commander": ">=4.0.1",
-    "csv-parse": ">=4.4.6",
+    "csv-parse": ">=5",
     "xlsx-populate": ">=1.14.0"
   },
   "authors": [
