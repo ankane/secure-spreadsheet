@@ -4,7 +4,7 @@
   "homepage": "https://github.com/ankane/secure-spreadsheet",
   "description": "Secure your data exports - encrypt and password protect sensitive CSV and XLSX files",
   "engines": {
-    "node": ">= 10"
+    "node": ">=10"
   },
   "bin": {
     "secure-spreadsheet": "src/cli.js"
