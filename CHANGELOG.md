@@ -1,4 +1,4 @@
-## 0.2.0 (unreleased)
+## 0.2.0 (2022-11-14)
 
 - Dropped support for Node < 10
 
