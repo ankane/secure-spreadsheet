@@ -20,7 +20,7 @@ program
 
 const options = program.opts();
 
-assert(options.password, "--password required");
+assert(options.password, '--password required');
 
 function writeWorkbook(workbook) {
   workbook.outputAsync({password: options.password}).then(data => {
@@ -28,7 +28,7 @@ function writeWorkbook(workbook) {
   });
 }
 
-if (options.inputFormat == "xlsx") {
+if (options.inputFormat == 'xlsx') {
   const readable = process.stdin;
   const chunks = [];
 
