@@ -13,7 +13,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "commander": ">=4.0.1",
+    "commander": ">=7",
     "csv-parse": ">=5",
     "xlsx-populate": ">=1.14.0"
   },
