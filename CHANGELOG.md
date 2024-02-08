@@ -1,3 +1,7 @@
+## 0.2.1 (unreleased)
+
+- Fixed error with Commander.js 12
+
 ## 0.2.0 (2022-11-14)
 
 - Dropped support for Node < 10

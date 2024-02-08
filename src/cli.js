@@ -2,7 +2,7 @@
 
 const assert = require('assert');
 const { parse } = require('csv-parse');
-const program = require('commander');
+const { program } = require('commander');
 const XlsxPopulate = require('xlsx-populate');
 
 process.on('uncaughtException', function (err) {
