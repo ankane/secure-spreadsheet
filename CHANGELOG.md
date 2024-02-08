@@ -1,4 +1,4 @@
-## 0.2.1 (unreleased)
+## 0.2.1 (2024-02-07)
 
 - Fixed error with Commander.js 12
 
