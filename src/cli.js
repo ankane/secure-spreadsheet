@@ -6,7 +6,6 @@ const { program } = require('commander');
 const XlsxPopulate = require('xlsx-populate');
 
 process.on('uncaughtException', function (err) {
-  // eslint-disable-next-line no-console
   console.error('Error: ' + err.message);
   process.exit(1);
 });
