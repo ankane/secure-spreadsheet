@@ -15,7 +15,7 @@
   "dependencies": {
     "commander": ">=7 <12",
     "csv-parse": ">=5",
-    "xlsx-populate": ">=1.14.0"
+    "xlsx-populate": ">=1.14"
   },
   "authors": [
     "ankane"
