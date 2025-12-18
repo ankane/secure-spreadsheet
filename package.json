@@ -9,9 +9,6 @@
   "bin": {
     "secure-spreadsheet": "src/cli.js"
   },
-  "scripts": {
-    "lint": "eslint src"
-  },
   "dependencies": {
     "commander": ">=7 <12",
     "csv-parse": ">=5",
@@ -24,8 +21,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ankane/secure-spreadsheet"
-  },
-  "devDependencies": {
-    "eslint": ">=9"
   }
 }
