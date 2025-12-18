@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const assert = require('assert');
-const { parse } = require('csv-parse');
-const { program } = require('commander');
-const XlsxPopulate = require('xlsx-populate');
+import assert from 'node:assert';
+import { parse } from 'csv-parse';
+import { program } from 'commander';
+import XlsxPopulate from 'xlsx-populate';
 
 process.on('uncaughtException', function (err) {
   console.error('Error: ' + err.message);
