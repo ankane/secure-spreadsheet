@@ -1,7 +1,7 @@
 ## 0.3.0 (unreleased)
 
 - Removed dependency on Commander.js
-- Dropped support for Node < 18
+- Dropped support for Node < 18.3
 
 ## 0.2.1 (2024-02-07)
 
