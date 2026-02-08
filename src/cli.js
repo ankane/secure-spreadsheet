@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import assert from 'node:assert';
+import { parseArgs } from 'node:util';
 import { parse } from 'csv-parse';
-import { program } from 'commander';
 import XlsxPopulate from 'xlsx-populate';
 
 process.on('uncaughtException', function (err) {
@@ -10,12 +10,25 @@ process.on('uncaughtException', function (err) {
   process.exit(1);
 });
 
-program
-  .option('--password <password>', 'Password')
-  .option('--input-format <format>', 'Input format')
-  .parse(process.argv);
+const program = {
+  'password': {type: 'string'},
+  'input-format': {type: 'string'},
+  'help': {type: 'boolean', short: 'h'}
+};
 
-const options = program.opts();
+const { values: options } = parseArgs({options: program});
+
+if (options.help) {
+  const usage = `Usage: secure-spreadsheet [options]
+
+Options:
+  --password <password>    Password
+  --input-format <format>  Input format
+  -h, --help               display help for command
+`;
+  process.stdout.write(usage);
+  process.exit(0);
+}
 
 assert(options.password, '--password required');
 
@@ -25,7 +38,7 @@ function writeWorkbook(workbook) {
   });
 }
 
-if (options.inputFormat == 'xlsx') {
+if (options['input-format'] == 'xlsx') {
   const readable = process.stdin;
   const chunks = [];
 

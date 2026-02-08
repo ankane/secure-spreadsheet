@@ -5,13 +5,12 @@
   "description": "Secure your data exports - encrypt and password protect sensitive CSV and XLSX files",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=18.3"
   },
   "bin": {
     "secure-spreadsheet": "src/cli.js"
   },
   "dependencies": {
-    "commander": ">=7",
     "csv-parse": ">=5",
     "xlsx-populate": ">=1.14"
   },
