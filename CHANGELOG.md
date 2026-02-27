@@ -1,4 +1,4 @@
-## 0.3.0 (unreleased)
+## 0.3.0 (2026-02-27)
 
 - Removed dependency on Commander.js
 - Dropped support for Node < 18.3
