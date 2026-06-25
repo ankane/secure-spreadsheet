@@ -1,25 +1,20 @@
 {
   "name": "secure-spreadsheet",
   "version": "0.3.0",
-  "homepage": "https://github.com/ankane/secure-spreadsheet",
   "description": "Secure your data exports - encrypt and password protect sensitive CSV and XLSX files",
+  "homepage": "https://github.com/ankane/secure-spreadsheet",
+  "license": "MIT",
+  "author": "Andrew Kane",
   "type": "module",
-  "engines": {
-    "node": ">=18.3"
-  },
+  "files": ["src"],
   "bin": {
     "secure-spreadsheet": "src/cli.js"
+  },
+  "engines": {
+    "node": ">=18.3"
   },
   "dependencies": {
     "csv-parse": ">=5",
     "xlsx-populate": ">=1.14"
-  },
-  "authors": [
-    "ankane"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ankane/secure-spreadsheet"
   }
 }
